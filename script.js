@@ -18,7 +18,7 @@ function onMousePaint(e) {
         coordinatesArr.push(`${e.offsetX},${e.offsetY}`)
         svg.insertAdjacentHTML("beforeend", `
             <polyline class="line" points="${coordinatesArr.join(" ")}" stroke=${colorEl.value} 
-            stroke-width=${widthEl.value}px fill="none" />
+            stroke-width=${widthEl.value}px fill="none" stroke-linecap="round" />
         `);
     } else if (e.buttons === 1 && intrumentEl.value === "circle") {
         svg.insertAdjacentHTML("beforeend", `<circle cx=${x1} cy=${y1} r="50px" stroke="black" stroke-width="3" fill="red" />`);

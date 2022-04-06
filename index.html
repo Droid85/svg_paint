@@ -1,29 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>SVG Paint</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js" defer></script>
+    <title>SVG Paint</title>
 </head>
 <body>
-	<svg id="svg" width="800px" height="600px"></svg>
-    <section id="control">
-        <select id="instruments">
-            <option value="pen">Pen</option>
-            <option value="circle">Circle</option>
-            <option value="rect">Rectangle</option>
-            <option value="eraser">Eraser</option>
-        </select>
-        <input type="color" id="color">
-        <select id="size">
-            <option>1</option>
-            <option>2</option>
-            <option>4</option>
-            <option>8</option>
-        </select>
-        <button id="clearBtn" class="clrButton">Clear list</button>
+    <section id="canvasSection"></section>
+    <section id="shapesSection">
+        <button id="line" class="instruments">Line</button>
+        <button id="pencil" class="instruments">Pencil</button>
+        <button id="circle" class="instruments">Circle</button>
+        <button id="ellipse" class="instruments">Ellipse</button>
+        <button id="rectangle" class="instruments">Rectangle</button>
+        <button id="select">Select</button>
     </section>
-	<script src="script.js"></script>
+    <section id="control_section">
+        <input type="color">
+        <input type="checkbox">
+        <button id="undoBtn">Undo</button>
+        <button id="clearBtn">Reset</button>
+    </section>
+    <script src="index.js" defer></script>
 </body>
 </html>
